@@ -17,12 +17,12 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public ResponseEntity<Produto> criar(@RequestBody Produto dados) {
+    public ResponseEntity<com.example.Seiclasses.entity.ProdutoEntity> criar(@RequestBody com.example.Seiclasses.entity.ProdutoEntity dados) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.criar(dados));
     }
 
     @GetMapping
-    public List<Produto> listar() {
+    public List<ProdutoEn> listar() {
         return service.listar();
     }
 
